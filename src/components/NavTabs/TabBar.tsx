@@ -1,8 +1,9 @@
 import { View } from 'react-native';
 import { useTheme, useLinkBuilder } from '@react-navigation/native';
 import { Text, PlatformPressable } from '@react-navigation/elements';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 
-export default function TabBar({ state, descriptors, navigation }) {
+export default function TabBar({ state, descriptors, navigation }: BottomTabBarProps) {
     const { colors } = useTheme();
     const { buildHref } = useLinkBuilder();
 
@@ -40,6 +41,7 @@ export default function TabBar({ state, descriptors, navigation }) {
 
                 return (
                     <PlatformPressable
+                        key={`navbar-item-${index}`}
                         href={buildHref(route.name, route.params)}
                         accessibilityState={isFocused ? { selected: true } : {}}
                         accessibilityLabel={options.tabBarAccessibilityLabel}
