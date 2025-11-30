@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import TabBar from './TabBar';
+// import TabBar from './TabBar';
 import ExtraScreen from '../ExtraScreen/ExtraScreen';
 import HomeScreen from '../HomeScreen/HomeScreen';
 import ThirdScreen from '../ThirdScreen/ThirdScreen';
 import FourthScreen from '../FourthScreen/FourthScreen';
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
 
 // to add react navigation
 // https://reactnavigation.org/docs/bottom-tab-navigator/?config=dynamic

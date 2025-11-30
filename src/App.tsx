@@ -1,21 +1,15 @@
-import { StatusBar, StyleSheet, View, ImageBackground, SafeAreaView } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import Header from './components/Header/Header';
 import { NavTabs } from './components/NavTabs/NavTabs';
 
 export default function App() {
   return (
     <>
-      {/* Carrier, time, battery, etc. bar */}
+      {/* Carrier, time, battery, etc. bar - doesn't matter where it goes */}
       <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-      <ImageBackground
-        source={require('./assets/images/CanvaName.jpeg')}
-        style={styles.statusBarBg}
-        imageStyle={styles.imageStyle}
-      >
-        <SafeAreaView />
-      </ImageBackground>
+      <Header />
       <View style={styles.container}>
-
         <NavigationContainer>
           <NavTabs />
         </NavigationContainer>
@@ -25,14 +19,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  statusBarBg: {
-    height: 65,
-    justifyContent: 'center'
-  },
-  imageStyle: {
-    resizeMode: 'cover',
-    height: 110,
-  },
   container: {
     flex: 1,
   },
